@@ -1,0 +1,121 @@
+---
+title: "Plotting Small Pelagic Surveys"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# SEAMOUNTS # SUIKO, SHOWA, YOUMEI, NINTOKU, JINGU, OJIN, KOKO, KINMEI, YURYAKU, KAMMU, COLAHAN, C-H, NW HANCOCK, SE HANCOCK)
+
+library(ncdf4)
+library(ggplot2)
+library(gganimate)
+library(sf)
+library(rgdal)
+library(proj4)
+library(rnaturalearth)
+library(gifski)
+
+#memory limit change
+memory.limit(size=56000)
+
+#IMPORT THE TRAJECTORY FILES TO R
+y10_d0_weekly2_file<-nc_open("C:/Users/laverym/Desktop/particle/y10_d0_weekly2.nc")
+print(y10_d0_weekly2_file)
+# 5 variables: trajectory id, time, lat, lon, depth
+# varid: var whose attribute is to be read
+Lon<-c(ncvar_get(y10_d0_weekly2_file,varid="lon"))
+Lat<-c(ncvar_get(y10_d0_weekly2_file,varid="lat"))
+Time<-c(ncvar_get(y10_d0_weekly2_file,varid="time"))
+
+#POSIX.ct - date/time w control for time zone
+Time<-as.Date(as.POSIXct(Time, origin = "1995-01-01 12:00:00"))
+Depth<-c(ncvar_get(y10_d0_weekly2_file,varid="z"))
+NPA<-c(ncvar_get(y10_d0_weekly2_file,varid="trajectory"))
+nc_close(y10_d0_weekly2_file)
+
+#WRITE CSV FROM NCDF
+data1<-data.frame(Lon=Lon,Lat=Lat,Time=Time,Depth=Depth,NPA=NPA)
+length(data1$Time[is.na(data1$Time)])
+data1<-data1[is.na(data1$Time)==FALSE,]
+
+#BRING IN SEAMOUNT LOCATIONS
+seamounts<-data.frame(Seamount=c("Suiko","Showa","Youmei","Nintoku","Jingu","Ojin","Koko","Kinmei","Yuryaku","Kammu","Colahan","C-H","NW Hancock","SE Hancock"),Longitude=c(170.3, 170.4, 170.4, 170.6, 171.2, 170.5, 171.6, 171.5, 172.3, 173, 176, 177.6, 178.7, 179.1),Latitude=c(44.6, 43, 42.3, 41.1, 38.8, 38, 35.3, 33.7, 32.7, 32.2, 31.3, 30.4, 30.3, 29.8),stringsAsFactors = FALSE)
+
+data1$Seamount<-NA
+data1$Release_date<-NA
+d3<-data.frame(Lon=numeric(),Lat=numeric(),Time=numeric(),Depth=numeric(),NPA=numeric(),Seamount=character(),Release_date=numeric())
+
+#loop in data frame for which, do
+for(i in 1:length(unique(data1$NPA))){
+  d1<-which(data1$NPA==unique(data1$NPA)[i])
+  d2<-which(round(seamounts$Latitude,2)==round(data1$Lat[d1[1]],2)&round(seamounts$Longitude,2)==round(data1$Lon[d1[1]],2))
+  data1$Seamount[d1]<-seamounts[d2,1]
+  data1$Release_date[d1]<-data1$Time[d1[1]]
+  d3<-rbind(d3,data1[d1[1:245],])}
+d3$Release_date<-as.Date(d3$Release_date,origin="1970-01-01 0:00:00")
+data1<-d3
+
+
+
+write.csv(data1,"y2010_d0_weekly2.csv",row.names=FALSE)
+
+#IMPORT THE BASEMAP AND TRANSFORM TO A NICER PROJECTION FOR THE NORTH PACIFIC
+bg = ne_countries(scale = "medium",  returnclass = "sf")
+bg1<-st_transform(bg,3832)
+
+ 
+
+#TRANSFORM THE TRAJECTORIES TO THE SAME PROJECTION AND ADD THEM TO THE DATA SET
+data2<-project(cbind(data1$Lon,data1$Lat),"+proj=merc +lon_0=150 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
+data1$LonP<-data2[,1]
+data1$LatP<-data2[,2]
+
+
+
+#MAKE A SET OF BOUNDARIES TO USE AS THE PLOTTING RANGE (LIMITS ON LONGITUDE AND LATITUDE)
+data3<-data.frame(cbind(c(130,235),c(62,25)))
+data3<-proj4::project(data3,"+proj=merc +lon_0=150 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs")
+
+ 
+
+#PLOT THE ENTIRE TRAJECTORY WITH THE MAP AS THE BACKGROUND
+p<-ggplot()+
+  #basemap
+  geom_sf(data = bg1)+
+  coord_sf(xlim = range(data3$x, na.rm = TRUE), 
+           ylim = range(data3$y, na.rm = TRUE), 
+           expand = TRUE)+
+  
+  # lines and points
+  geom_path(data = data1, 
+            aes(x=LonP,y=LatP,group=Seamount,color=Seamount), 
+            alpha = 0.3)+
+  geom_point(data = data1, 
+             aes(x=LonP,y=LatP,group=Seamount,color=Seamount),
+             alpha = 0.7, shape=21, size = 2)+
+  
+  # formatting
+  scale_fill_viridis_d(option = "inferno")+
+  scale_color_viridis_d(option = "inferno")+
+  scale_size_continuous(range = c(0.1,14))+
+  labs(x=NULL, y=NULL, 
+       fill = 'Seamount', 
+       color = 'Seamount')+
+  theme_dark()+
+  theme(panel.grid = element_blank())
+
+ 
+
+#ANIMATE IT
+anim = p + 
+  transition_reveal(along = Time)+
+  ease_aes('linear',renderer=gifski_renderer())+
+  ggtitle("Date: {frame_along}")
+
+ 
+
+ #SAVE THE ANIMATION AS A GIF
+#animate(anim, nframes = 365, fps = 10, renderer= gifski_renderer())
+anim_save("y2010_d0_weekly2.gif",anim)
+
+```
