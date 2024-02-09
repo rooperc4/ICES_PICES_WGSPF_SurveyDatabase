@@ -1,0 +1,131 @@
+"Ecoregion","Target_species","Life_history_stages","Other_SPF","Gear","Timing","Season","Longitude","Latitude"
+"Baltic Sea","Clupea harengus
+Sprattus sprattus","juvenile, adult","Engraulis encrasicolus ","acoustics, trawls","annual","autumn",19.8633,58.488
+"Baltic Sea","Clupea harengus","larval",NA,"plankton nets","weekly","winter, spring",19.8633,58.488
+"Barents Sea","Clupea harengus","juvenile, adult",NA,"acoustics, trawls","annual","winter",37.1064,74.9884
+"Barents Sea","Clupea harengus ","juvenile, adult",NA,"acoustics, trawls","annual","autumn",37.1064,74.9884
+"Bay of Biscay","Sardina pilchardus
+Engraulis encrasicolus","egg, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+","acoustics, trawls","annual","spring",-3.1632,45.557
+"California current","Clupea pallasi
+","egg, adult",NA,"plankton nets","annual",NA,-126,40
+"California current","Sardinops sagax
+Engraulis mordax ","egg, larval",NA,"plankton nets","quarterly ","all",-126,40
+"California current",NA,"juvenile, adult","Clupea pallasii
+Sardinops sagax
+shads","acoustics, trawls","annual","summer",-126,40
+"California current","Engraulis mordax
+Clupea pallasii","juvenile, adult",NA,"acoustics, trawls","annual","spring, summer",-126,40
+"California current",NA,"juvenile, adult","Sardinops sagax
+Engraulis mordax","trawls","annual","summer",-126,40
+"California current",NA,"larval","Sardinops sagax
+Engraulis mordax","plankton nets","biweekly","spring, summer, autumn",-126,40
+"California current",NA,"larval","Sardinops sagax
+Engraulis mordax","plankton nets","biweekly","all",-126,40
+"California current","Sardinops sagax
+Engraulis mordax","egg, juvenile, adult","Clupea pallasii ","acoustics, trawls","annual","summer",-126,40
+"Celtic-Biscay Shelf","Sardina pilchardus
+Engraulis encrasicolus","adult",NA,NA,"annual","spring",-8.2503,49.0705
+"Celtic-Biscay Shelf",NA,"adult",NA,"acoustics, trawls","annual","spring",-8.2503,49.0705
+"Celtic-Biscay Shelf","Sardina pilchardus
+Engraulis encrasicolus","egg, larval, adult",NA,NA,"annual","spring",-8.2503,49.0705
+"Celtic-Biscay Shelf","Clupea harengus","juvenile, adult","Sprattus sprattus","acoustics, trawls","annual","summer",-8.2503,49.0705
+"Celtic-Biscay Shelf","Clupea harengus
+Sprattus sprattus","juvenile, adult","Sardina pilchardus
+Engraulis encrasicolus
+","acoustics, trawls","annual","summer",-8.2503,49.0705
+"Celtic-Biscay Shelf","Sardina pilchardus
+Sprattus sprattus","all","Clupea harengus
+Engraulis encrasicolus ","acoustics, trawls, plankton nets","annual","autumn",-8.2503,49.0705
+"Celtic-Biscay Shelf","Clupea harengus
+Sprattus sprattus
+Sardina pilchardus","juvenile, adult",NA,"trawls","annual","spring",-8.2503,49.0705
+"Celtic-Biscay Shelf","Clupea harengus
+Sprattus sprattus
+Sardina pilchardus","juvenile, adult",NA,"trawls","annual","autumn",-8.2503,49.0705
+"Celtic-Biscay Shelf","Clupea harengus","larval",NA,"plankton nets","annual","autumn",-8.2503,49.0705
+"Celtic-Biscay Shelf",NA,"larval, juvenile",NA,"plankton nets","annual","spring",-8.2503,49.0705
+"Celtic-Biscay Shelf","Sardina pilchardus
+Engraulis encrasicolus","egg, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+","acoustics, trawls","annual","spring",-8.2503,49.0705
+"Channel","Clupea harengus","juvenile, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+Alosa sp.","trawls","annual","spring",0.3571,50.1347
+"Channel","Clupea harengus","juvenile","Sardina pilchardus, 
+Sprattus sprattus","plankton nets","annual","winter",0.3571,50.1347
+"eastern Bering Sea","Clupea harengus","juvenile, adult",NA,"acoustics, trawls","annual",NA,-176.1395,56.9073
+"eastern Bering Sea",NA,"juvenile, adult",NA,"acoustics, trawls","annual",NA,-176.1395,56.9073
+"eastern Bering Sea",NA,"larval",NA,"plankton nets","annual","spring",-176.1395,56.9073
+"Gulf of Alaska",NA,"juvenile",NA,"seine","annual",NA,-144,57
+"Gulf of Alaska",NA,"larval",NA,"plankton nets","annual",NA,-144,57
+"Gulf of Alaska",NA,"juvenile, adult",NA,"acoustics, trawls","annual",NA,-144,57
+"Gulf of Alaska",NA,"larval",NA,"plankton nets","annual","spring",-144,57
+"Gulf of Alaska","Sardinops sagax
+Engraulis mordax","egg, juvenile, adult","Clupea pallasii ","acoustics, trawls","annual","summer",-144,57
+"Gulf of Alaska","Clupea pallasi
+Sardinops sagax ","juvenile, adult","Engraulis mordax","trawls","annual","summer",-144,57
+"Iberian Coastal","Sardina pilchardus
+Engraulis encrasicolus","egg, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+","acoustics, trawls","annual","spring",-12.0876,40.483
+"Kattegat","Clupea harengus","juvenile, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+Alosa sp.","trawls","annual","spring",11.3004,56.952
+"Kattegat","Clupea harengus","juvenile","Sardina pilchardus, 
+Sprattus sprattus","plankton nets","annual","winter",11.3004,56.952
+"Newfoundland-Labrador Shelf",NA,"juvenile, adult",NA,"acoustics, seines","annual","spring",-50,51
+"Newfoundland-Labrador Shelf","Clupea harengus","juvenile, adult",NA,"acoustics, seines","annual","spring, autumn, winter",-50,51
+"North Sea",NA,"juvenile","Clupea harengus
+Sprattus sprattus","seine","annual","autumn",3.5156,56.511
+"North Sea","Clupea harengus","juvenile",NA,"plankton nets","annual","spring",3.5156,56.511
+"North Sea","Clupea harengus","juvenile, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+Alosa sp.","trawls","annual","spring",3.5156,56.511
+"North Sea","Clupea harengus","juvenile","Sardina pilchardus, 
+Sprattus sprattus","plankton nets","annual","winter",3.5156,56.511
+"North Sea","Clupea harengus
+Sprattus sprattus","juvenile, adult","Sardina pilchardus
+Engraulis encrasicolus
+","acoustics, trawls","annual","summer",3.5156,56.511
+"North Sea","Clupea harengus","larval",NA,"plankton nets","annual","autumn, winter",3.5156,56.511
+"Northeast U.S. Continental Shelf","Brevoortia tyrannus
+Anchoa mitchilli
+Anchoa hepsetus","juvenile",NA,"plankton nets","weekly",NA,-70,40
+"Northeast U.S. Continental Shelf","Clupea harengus","juvenile, adult",NA,"acoustics, trawls","annual","summer",-70,40
+"Norwegian Shelf","Clupea harengus","larval",NA,"plankton nets","annual","spring",12,69
+"Norwegian Shelf","Clupea harengus
+Sprattus sprattus","juvenile, adult",NA,"acoustics, trawls","annual",NA,12,69
+"Norwegian Shelf","Clupea harengus","adult",NA,"acoustics, trawls","annual","spring",12,69
+"Norwegian Shelf",NA,"adult","Clupea harengus","acoustics, trawls","annual","summer",12,69
+"Norwegian Shelf","Clupea harengus","adult",NA,"acoustics, trawls","annual","winter",12,69
+"Skagerrak","Clupea harengus","juvenile, adult","Sardina pilchardus
+Engraulis encrasicolus
+Sprattus sprattus
+Alosa sp.","trawls","annual","spring",9.9315,58.3523
+"Skagerrak","Clupea harengus","juvenile","Sardina pilchardus, 
+Sprattus sprattus","plankton nets","annual","winter",9.9315,58.3523
+"Southeast U.S. Continental Shelf","Brevoortia tyrannus
+Anchoa mitchilli
+Anchoa hepsetus","juvenile",NA,"plankton nets","weekly",NA,-76,30
+"Southern Brazilian Shelf","Sardinella brasiliensis
+Engraulis anchoita","egg, larval, adult",NA,"plankton nets","annual","spring, summer",155,-35
+"Southwestern Australian Shelf","Sardinops sagax","egg, adult","Engraulis australis","plankton nets","annual","summer, autumn",-45,-30
+"Southwestern Australian Shelf","Sardinops sagax","egg, adult","Engraulis australis","plankton nets","biennial","summer, autumn",-45,-30
+"California current","Clupea pallasii Salmonidae","juvenile, adult","Sebastes Osmeridae","Midwater trawl, Acoustics, Bongo net, CTD","annual","summer",-125.9066,49.15
+"California current","Clupea pallasii","juvenile","Salmonidae Osmeridae","purse seine","annual","autumn",-123.87,49.36
+"Gulf of Alaska","Mallotus catervarius","juvenile, adult","Clupea pallasii Thaleichthys pacificus","acoustics, trawls","biennial","summer",-144,57
+"Gulf of Alaska","Gadus chalcogrammus","juvenile, adult",NA,"acoustics, trawls","annual","winter",-144,57
+"eastern Bering Sea","Gadus chalcogrammus","juvenile, adult",NA,"acoustics, trawls","annual","summer",-176.1395,56.9073
+"Gulf of Alaska","Ammodytes personatus Mallotus catervarius Clupea pallasii Gadus chalcogrammus","juvenile, adult","Osmeridea Gadidae","acoustics, trawls","annual","summer",-152,59.5
+"Gulf of Alaska","Clupea pallasii","juvenile, adult","Ammodytes personatus Mallotus catervarius","acoustics, seines","annual","spring, summer",-147.09,60.69
+"Gulf of Alaska","Mallotus catervarius","juvenile","Salmonidae Osmeridae","plankton nets","biennial","autumn",-152,59.5
+"California current","Thaleichtys pacificus","egg",NA,"plankton nets","annual","spring",-123.87,49.36
+"California current","Thaleichtys pacificus","juvenile",NA,"trawls","annual","spring",-125.9066,49.15
